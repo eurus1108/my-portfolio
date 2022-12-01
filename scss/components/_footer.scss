@@ -1,0 +1,52 @@
+@use "../abstract/" as *;
+
+.footer {
+  padding: 5.2rem;
+  color: $color-text-light;
+  background-color: $color-bg-dark;
+
+  & &__container {
+    margin-bottom: 5.2rem;
+  }
+
+  & &__top {
+    margin-bottom: 5rem;
+  }
+
+  & &__logo {
+    display: block;
+    width: 30px;
+    height: 30px;
+    transform: fill 300ms ease;
+    @include cover-background("./images/logo.svg");
+    @include breakpoint-up(medium) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  & &__nav {
+    margin-top: 6rem;
+    width: calc(26.4rem * 3);
+  }
+
+  & &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+
+    .footer-nav-link {
+      font-weight: $font-weight-medium;
+      @include letter-spacing(5);
+
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  & &__bottom {
+    text-align: right;
+  }
+}

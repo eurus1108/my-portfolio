@@ -1,0 +1,25 @@
+@use "../abstract/" as *;
+
+.about-me {
+  padding: 5.2rem;
+
+  & &__container {
+    display: flex;
+    justify-content: center;
+    border: {
+      top: 2px dotted $color-bg-dark;
+      bottom: 2px dotted $color-bg-dark;
+    }
+
+    padding: 5.2rem 0;
+
+    .text-container {
+      max-width: 50vw;
+    }
+
+    p {
+      line-height: 2.2;
+      @include letter-spacing(5);
+    }
+  }
+}

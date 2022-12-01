@@ -1,0 +1,18 @@
+$color-neutral-700: #222222;
+$color-neutral-600: #3e3e3e;
+$color-neutral-500: #a7a7a7;
+$color-neutral-400: #e9e9e9;
+$color-neutral-300: #f3f3f3;
+$color-neutral-200: white;
+$color-orange: #fa5d29;
+
+$color-bg-dark: $color-neutral-700;
+$color-bg-default: $color-neutral-200;
+$color-bg-subtle-dark: $color-neutral-500;
+$color-bg-subtle: $color-neutral-300;
+$color-bg-dark-transparent: rgba($color-neutral-700, 0.8);
+$color-bg-light-transparent: rgba($color-neutral-200, 0.8);
+$color-text-light: $color-neutral-200;
+$color-text-subtle: $color-neutral-600;
+$color-text-default: $color-neutral-700;
+$color-accent-01: $color-orange;

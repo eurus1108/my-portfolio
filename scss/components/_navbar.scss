@@ -1,0 +1,70 @@
+@use "../abstract/" as *;
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 2.4rem 5.2rem;
+
+  @include breakpoint-down(small) {
+    padding: 2.4rem;
+
+    & &__nav {
+      display: none;
+    }
+  }
+
+  & &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include center-block;
+  }
+
+  & &__logo {
+    width: 30px;
+    height: 30px;
+    transform: fill 300ms ease;
+    @include cover-background("./images/logo-inverted.svg");
+    @include breakpoint-up(medium) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  & &__list {
+    display: flex;
+  }
+
+  & &__item {
+    margin-left: 2.4rem;
+
+    .header-nav-link {
+      position: relative;
+      @include letter-spacing(5);
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        transform: scaleX(0);
+        transform-origin: left center;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $color-bg-dark;
+        transition: 400ms ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      @include breakpoint-down(medium) {
+        font-size: $font-size-100;
+      }
+    }
+  }
+}

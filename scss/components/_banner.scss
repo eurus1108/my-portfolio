@@ -1,0 +1,17 @@
+@use "../abstract/" as *;
+
+.skinny-banner {
+  position: relative;
+  z-index: 9999;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: $font-size-100;
+  text-align: center;
+  @include letter-spacing(10);
+  color: $color-text-light;
+  background-color: $color-bg-dark;
+
+  a {
+    color: $color-accent-01;
+  }
+}

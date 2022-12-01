@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &,
+  button {
+    font-family: inherit;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}

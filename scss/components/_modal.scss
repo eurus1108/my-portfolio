@@ -1,0 +1,56 @@
+@use "../abstract/" as *;
+
+.modal {
+  position: absolute;
+  top: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  transform: translateY(-100%);
+  width: 100%;
+  height: 100vh;
+  background-color: $color-bg-subtle;
+  padding: 2.4rem;
+  transition: transform 400ms ease;
+
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+
+  &.modal--active {
+    transform: translateY(0);
+  }
+
+  &__list {
+    padding-bottom: 7.2rem;
+  }
+
+  &__item {
+    margin-top: 1.8rem;
+
+    .header-nav-link {
+      position: relative;
+      font-size: $font-size-600;
+      font-weight: $font-weight-xbold;
+      @include letter-spacing(5);
+      color: $color-text-default;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        transform: scaleX(0);
+        transform-origin: left center;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: $color-bg-dark;
+        transition: 400ms ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
