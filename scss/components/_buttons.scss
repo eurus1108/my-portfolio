@@ -81,6 +81,7 @@
   padding: 2.4rem;
   font-weight: $font-weight-medium;
   @include letter-spacing(10);
+  color: $color-text-light;
   background-color: $color-bg-dark;
   border-radius: 0.8rem;
   transition: background-color 300ms ease;

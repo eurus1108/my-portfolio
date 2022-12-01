@@ -7,10 +7,18 @@
 
   & &__container {
     margin-bottom: 5.2rem;
+    text-align: center;
   }
 
   & &__top {
     margin-bottom: 5rem;
+
+    @include breakpoint-down(small) {
+      .cont {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   & &__logo {
@@ -27,7 +35,7 @@
 
   & &__nav {
     margin-top: 6rem;
-    width: calc(26.4rem * 3);
+    max-width: calc(26.4rem * 3);
   }
 
   & &__list {
@@ -44,9 +52,15 @@
         opacity: 0.8;
       }
     }
+
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
   }
 
   & &__bottom {
-    text-align: right;
+    @include breakpoint-up(medium) {
+      text-align: right;
+    }
   }
 }

@@ -28,4 +28,8 @@ h2 {
   margin-bottom: 2.4rem;
   font-size: $font-size-500;
   @include letter-spacing(5);
+
+  @include breakpoint-down(small) {
+    font-size: $font-size-400;
+  }
 }

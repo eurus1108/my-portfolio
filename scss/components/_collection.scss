@@ -3,12 +3,27 @@
 .collection {
   & &__container {
     padding: 5.2rem;
+
+    @include breakpoint-down(small) {
+      padding: {
+        left: 2.4rem;
+        right: 2.4rem;
+      }
+    }
   }
 
   & &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down(xsmall) {
+      grid-template-columns: 1fr;
+    }
   }
 
   & &__item {

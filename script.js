@@ -24,6 +24,4 @@ window.addEventListener("scroll", () => {
   } else {
     upButton.classList.remove("menu-float--visible");
   }
-
-  console.log(currentScroll);
 });
