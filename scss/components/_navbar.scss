@@ -43,6 +43,7 @@
 
     .header-nav-link {
       position: relative;
+      font-weight: $font-weight-medium;
       @include letter-spacing(5);
 
       &::after {
