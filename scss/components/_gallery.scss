@@ -1,0 +1,47 @@
+@use "../abstract/" as *;
+
+.gallery {
+  padding: 5.2rem;
+
+  @include breakpoint-down(medium) {
+    padding: {
+      left: 2.4rem;
+      right: 2.4rem;
+    }
+  }
+
+  h2 {
+    margin-bottom: 3.5rem;
+  }
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+
+    .content-container {
+      padding-bottom: 3rem;
+    }
+
+    .img-container {
+      margin-bottom: 4rem;
+      border: 1px solid $color-bg-dark;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down(xsmall) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

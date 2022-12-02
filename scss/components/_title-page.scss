@@ -1,0 +1,45 @@
+@use "../abstract/" as *;
+
+.title-section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2.4rem;
+
+  h1 {
+    font-size: $font-size-800;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: $font-size-300;
+    font-weight: $font-weight-medium;
+    @include letter-spacing(5);
+    max-width: 90rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  @include breakpoint-down(medium) {
+    h1 {
+      font-size: $font-size-700;
+    }
+
+    p {
+      font-size: $font-size-200;
+      max-width: 52rem;
+    }
+  }
+
+  @include breakpoint-down(xsmall) {
+    h1 {
+      font-size: $font-size-600;
+    }
+
+    p {
+      font-size: $font-size-100;
+    }
+  }
+}
