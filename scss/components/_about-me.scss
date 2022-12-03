@@ -28,6 +28,10 @@
     p {
       line-height: 2.2;
       @include letter-spacing(5);
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
     }
   }
 }

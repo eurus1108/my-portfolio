@@ -1,5 +1,9 @@
 @use "../abstract/" as *;
 
+.reflection {
+  padding-bottom: 15rem;
+}
+
 .title-section {
   display: grid;
   place-items: center;
@@ -11,7 +15,7 @@
     text-transform: uppercase;
   }
 
-  p {
+  .sub-heading {
     font-size: $font-size-300;
     font-weight: $font-weight-medium;
     @include letter-spacing(5);
@@ -19,6 +23,18 @@
 
     span {
       display: block;
+    }
+  }
+
+  .text-paragraphs {
+    margin: 2.4rem auto;
+    max-width: 100rem;
+    text-align: justify;
+    text-indent: 6rem;
+    line-height: 2;
+
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
     }
   }
 
