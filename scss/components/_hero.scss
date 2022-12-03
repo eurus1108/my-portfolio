@@ -43,7 +43,7 @@
       }
 
       h1 {
-        font-size: $font-size-700;
+        font-size: $font-size-800;
         text-transform: uppercase;
         @include letter-spacing(-2);
         line-height: 1.2;
@@ -54,15 +54,19 @@
           background-color: rgba($color-accent-01, 0.8);
         }
 
-        @include breakpoint-down(medium) {
-          font-size: $font-size-600;
+        @include breakpoint-down(large) {
+          font-size: $font-size-700;
         }
       }
 
       p {
         margin-bottom: 4.6rem;
-        font-size: $font-size-200;
+        font-size: $font-size-300;
         @include letter-spacing(10);
+
+        @include breakpoint-down(large) {
+          font-size: $font-size-200;
+        }
       }
     }
   }
