@@ -8,7 +8,7 @@
   & &__container {
     margin-bottom: 5.2rem;
 
-    @include breakpoint-down(xsmall) {
+    @include breakpoint-down(small) {
       text-align: center;
     }
   }

@@ -18,10 +18,23 @@ const upButton = document.querySelector(".menu-float");
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
+  const widthSize = window.innerWidth;
 
-  if (currentScroll >= 425) {
-    upButton.classList.add("menu-float--visible");
-  } else {
-    upButton.classList.remove("menu-float--visible");
+  if (widthSize >= 680) {
+    if (currentScroll >= 510) {
+      upButton.classList.add("menu-float--visible");
+    } else {
+      upButton.classList.remove("menu-float--visible");
+    }
   }
+
+  if (widthSize <= 679) {
+    if (currentScroll >= 170) {
+      upButton.classList.add("menu-float--visible");
+    } else {
+      upButton.classList.remove("menu-float--visible");
+    }
+  }
+
+  console.log(currentScroll);
 });
